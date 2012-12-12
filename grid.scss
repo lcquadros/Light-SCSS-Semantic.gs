@@ -16,8 +16,12 @@ $columns: 12;
 $total-width: gridsystem-width($columns);
 
 // Convenience function for calculating the $total-width / $calculated-width.
-@function gridsystem-ratio() {
-  @return $total-width / gridsystem-width($columns);
+@function gridsystem-ratio($c:$columns) {
+	@if ($total-width == 100%) {
+		@return $total-width / gridsystem-width($c);
+	} else {
+		@return $total-width / gridsystem-width($columns);
+	}
 }
 
 // Uncomment these two lines and the star-hack width/margin lines below to enable sub-pixel fix for IE6 & 7. See http://tylertate.com/blog/2012/01/05/subpixel-rounding.html
@@ -50,17 +54,17 @@ body {
 
 @mixin row($c:$columns) {
 	display: block;
-	width: (gridsystem-width($c) * gridsystem-ratio());
+	width: auto;
 	margin: 0 (-.5 * $gutter-width * gridsystem-ratio());
 	// *width: (gridsystem-width($c) * gridsystem-ratio())-$correction;
 	// *margin: 0 (-.5 * $gutter-width * gridsystem-ratio())-$correction;
 	@include clearfix();
 }
-@mixin column($x) {
+@mixin column($x,$c:columns) {
 	display: inline;
 	float: left;
-	width: ((gridsystem-width($x)-$gutter-width) * gridsystem-ratio());
-	margin: 0 (.5 * $gutter-width * gridsystem-ratio());
+	width: ((gridsystem-width($x)-$gutter-width) * gridsystem-ratio($c));
+	margin: 0 (.5 * $gutter-width * gridsystem-ratio($c));
 	// *width: ((gridsystem-width($x)-$gutter-width) * gridsystem-ratio())-$correction;
 	// *margin: 0 (.5 * $gutter-width * gridsystem-ratio())-$correction;
 }
