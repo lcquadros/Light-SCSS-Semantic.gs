@@ -17,7 +17,7 @@ $total-width: gridsystem-width($columns);
 
 // Convenience function for calculating the $total-width / $calculated-width.
 @function gridsystem-ratio($c:$columns) {
-	@if ($total-width == 100%){
+	@if ($total-width == 100%) {
 		@return $total-width / gridsystem-width($c);
 	} @else {
 		@return $total-width / gridsystem-width($columns);
@@ -48,7 +48,7 @@ body {
 
 @mixin row($c:$columns) {
 	display: block;
-	@if ($total-width == 100%){
+	@if ($total-width == 100%) {
     		width: auto;
     	} @else {
 		width: (gridsystem-width($c) * gridsystem-ratio());
