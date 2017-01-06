@@ -48,6 +48,7 @@ body {
 
 @mixin row($c:$columns) {
 	display: block;
+	box-sizing: border-box;
 	@if ($total-width == 100%) {
     		width: auto;
     		margin: 0 (-.5 * $gutter-width * gridsystem-ratio($c));
@@ -59,8 +60,9 @@ body {
 }
 
 @mixin column($x, $c:$columns) {
+	box-sizing: border-box;
 	width: ((gridsystem-width($x)-$gutter-width) * gridsystem-ratio($c));
-    	margin: 0 (.5 * $gutter-width * gridsystem-ratio($c));
+  margin: 0 (.5 * $gutter-width * gridsystem-ratio($c));
 }
 
 @mixin push($offset:1) {
