@@ -37,6 +37,22 @@ $total-width: gridsystem-width($columns);
 	}
 }
 
+// [ Placeholders ]
+// The very latest clearfix (so far, sigh) http://cssmojo.com/the-very-latest-clearfix-reloaded/
+%clearfix {
+  &:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+}
+
+// Float left
+%float-left{
+	float:left;
+}
+
+
 //////////
 // GRID //
 //////////
