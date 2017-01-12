@@ -12,8 +12,9 @@ $columns: 12 !default;
 	@return ($column-width + $gutter-width) * $c;
 }
 
-// Set $total-width to 100% for a fluid layout
-$total-width: gridsystem-width($columns) !default;
+// Switch the comments in the lines below for static grids.
+// $total-width: gridsystem-width($columns) !default;
+$total-width: 100% !default;
 
 // Convenience function for calculating the $total-width / $calculated-width.
 @function gridsystem-ratio($c:$columns) {
