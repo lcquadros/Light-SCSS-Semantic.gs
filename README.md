@@ -17,7 +17,7 @@ This fork is intended to adjust the code to my future projects. Feel free to use
 Using the grid
 -------------------
 
-Like [Semantic.gs]https://github.com/tylertate/semantic.gs, Syntatic uses the same variables and mixins with very few differences. Let's review the basics:
+Like [Semantic.gs][https://github.com/tylertate/semantic.gs], Syntatic uses the same variables and mixins with very few differences. Let's review the basics:
 
 ## Getting started
 
@@ -90,7 +90,7 @@ Following the same rules of Semantic.gs:
 > but nested columns in fluid layouts aren't generally supported by any
 > other grid system, so one additional parameter is a small price to
 > pay.
-> *([Semantic.gs][2] doc. excerpt)*
+> *([Semantic.gs][https://github.com/tylertate/semantic.gs] doc. excerpt)*
 >
 >```sass
 > article {
@@ -138,12 +138,12 @@ The .push() and .pull() mixins allow you apply left and right indents to your co
 This code  works exclusively with fluid values. The Web works best with fluid values. I think this is an issue that has already passed. Thanks to [bhcarpenter](https://github.com/bhcarpenter) columns and nested columns are ok.  
 
 ### Reducing the weight and remaining agnostic
-GS's does not need to know from the outset whether it will use float left, right or inline block display. Some of the previously included statements might have been useful before, but are redundant after a dozen or more instances.
+GS's doesn't need to know from the outset whether it will use float left, right or inline block display. Some of the previously included statements might have been useful before, but are redundant after a dozen or more instances.
 
 By removing them from the original code, normalizers and resets handle these details while keeping the code clean.
 
 ### Columns and *boxes*
-Roughly, a **box** is a column minus margins and pads, for structural organization (Nope, It's not just a div). It's a layout of the support element, where the columns work to organize the content and the boxes are used to organize columns with or without media queries.
+Roughly, a **box** is a column minus margins and pads, for structural organization (Nope, It's not just a div). It's a layout support element, where the columns work to organize the content and the boxes are used to organize columns with or without media queries.
 
 So when you want a box in your layout use the code below:
 
