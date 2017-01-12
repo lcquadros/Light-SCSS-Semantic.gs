@@ -17,7 +17,7 @@ This fork is intended to adjust the code to my future projects. Feel free to use
 Using the grid
 -------------------
 
-Like [Semantic.gs][https://github.com/tylertate/semantic.gs], Syntatic uses the same variables and mixins with very few differences. Let's review the basics:
+Like Semantic.gs (https://github.com/tylertate/semantic.gs), Syntatic uses the same variables and mixins with very few differences. Let's review the basics:
 
 ## Getting started
 
@@ -90,7 +90,7 @@ Following the same rules of Semantic.gs:
 > but nested columns in fluid layouts aren't generally supported by any
 > other grid system, so one additional parameter is a small price to
 > pay.
-> *([Semantic.gs][https://github.com/tylertate/semantic.gs] doc. excerpt)*
+> *Semantic.gs oc. excerpt)*
 >
 >```sass
 > article {
