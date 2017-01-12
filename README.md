@@ -5,11 +5,6 @@ Welcome. This is a fork of Nosenation/Light-SCSS-Semantic.gs wich is another for
 
 This is SCSS only Semantic.gs repo with CSS3 compliant updates. With prior changes cleverly made by [bhcarpenter](https://github.com/bhcarpenter).
 
-### Contents
-
-[TOC]
-
-
 About
 -------------
 
@@ -22,20 +17,19 @@ This fork is intended to adjust the code to my future projects. Feel free to use
 Using the grid
 -------------------
 
-Like [Semantic.gs][1], Syntatic uses the same variables and mixins with very few differences. Let's review the basics:
+Like [Semantic.gs]https://github.com/tylertate/semantic.gs, Syntatic uses the same variables and mixins with very few differences. Let's review the basics:
 
 ## Getting started
 
  1. Include syntatic.gs scss file on your project;
  2.  Set your grid variables (column width, gutter width, and number of columns);
- 3.  As in Semantic.gs, to use a fluid (percentage-based) grid rather than a fixed pixels, simply override one additional variable: `$total-width: 100%;`*
+ 3.  As in Semantic.gs, to use a fluid (percentage-based) grid rather than a fixed pixels, simply override one additional variable: `$total-width: 100%;`.
 
-**Soon it will be set as default*
 
 ### Applying the grid
 
 Again, as in Semantic.gs, the columns are defined from the mixins, so that the code below:
-```
+```sass
 .article {
    @include column(9);
 }
@@ -44,7 +38,7 @@ Again, as in Semantic.gs, the columns are defined from the mixins, so that the c
 }
 ```
 The following output will be displayed:
-```
+```css
 .article {
 	margin: 0px 1.04167%;
 	width: 72.9167%;
@@ -58,7 +52,7 @@ As you see, some original entries have been removed (floats) to enhance the fina
 
 So a better organization can be done here:
 
-```
+```sass
 %float-left{
 	float:left;
 }
@@ -73,7 +67,7 @@ So a better organization can be done here:
 ```
 Resulting in sane code for your project:
 
-```
+```css
 .article, .section {
 	float: left;
 }
@@ -98,7 +92,7 @@ Following the same rules of Semantic.gs:
 > pay.
 > *([Semantic.gs][2] doc. excerpt)*
 >
->```
+>```sass
 > article {
 >   @include .column(9);
 >
@@ -116,7 +110,7 @@ Following the same rules of Semantic.gs:
 
 The .push() and .pull() mixins allow you apply left and right indents to your columns. Those mixins weren't modified from original project:
 
-```
+```sass
 .article {
    @include push(2);
 }
@@ -153,7 +147,7 @@ Roughly, a **box** is a column minus margins and pads, for structural organizati
 
 So when you want a box in your layout use the code below:
 
-```
+```sass
 .article {
    @include column(9,$box:1);
 }
@@ -165,6 +159,3 @@ This will create a box using the same grid calculations.
 
 Syntatic.gs supports modern browsers as well as Internet Explorer 8 and up.  
 The sub-pixel rounding calculations have been totally removed from Syntatic.gs.
-
-----
-  [1]: https://github.com/tylertate/semantic.gs
